@@ -6,7 +6,7 @@ const newTab = new Array(10);
 for(let i=0; i<10; i++){
     newTab[i] = new Array (10)
     for (j=0;j<10;j++){
-    newTab[i] = [randomTab2]
+    newTab[j] = [randomTab2]
     }
     
     
