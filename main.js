@@ -1,7 +1,7 @@
 
 //1) Utwórz funkcję, która jako argument przyjmuje Twój rok urodzenia. 
 //Funkcja powinna zwrócić Twój aktualny wiek.
-let birth = (date)=> {
+let birth = ()=> {
     let date = new Date("1975");
     let yr = date.getFullYear();
     const result = yr - date;
