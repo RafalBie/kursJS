@@ -10,11 +10,22 @@ const tab = ['marcin','tomek','kasia','marysia','weronika','rafal','ola','tola',
 //     }
 //     console.log(check);
 // })
-const world = tab.every(function(name){
-    if (tab.includes(name) ){
-        console.log(name+tab.indexOf(name))
-    } else {
-        console.log("brak frazy w tablicy")
-    }
-});
-console.log (world)
+// const world = tab.every(function(name){
+//     if (tab.includes(name) ){
+//         console.log(name+tab.indexOf(name))
+//     } else {
+//         console.log("brak frazy w tablicy")
+//     }
+// });
+// console.log (world)
+
+const searchworld = world => {
+    if (tab.includes(world)){
+        return world+tab.indexOf(world)
+    } 
+       else return "brak frazy w tablicy"
+    
+};
+console.log (searchworld('tomek'))
+console.log (searchworld('rafal'))
+console.log (searchworld('totot'))

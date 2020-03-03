@@ -25,9 +25,13 @@ console.log(map(array,multiply))
 const filter = (array,filterFn) => {
     const mapArray = [];
     for (let i=0; i<array.length; i++) {
+        // const result = filterFn(array[i]);
+        // mapArray.push(result);
         const result = filterFn(array[i]);
-        mapArray.push(result);
-       
+        if (result == true) {
+            mapArray.push(result);
+        }
+    
     }
     return mapArray;
 };
