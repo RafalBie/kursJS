@@ -42,19 +42,28 @@ console.log(filter(array, evenNum))
 
 
 
-const reduce = (array,reduceFn) => {
+
+const reduce = (array, reduceF, highScore) => {
     
-    for (let i=0; i<array.length; i++) {
-        
-      
-       
-    }
-   
+    // let reduceF;
+    for(i=0;  i < array.length; i++)  {
+        reduceFn = i  + array[i]; 
+        // console.log(reduceF);
+        if (array[i] > highScore) {
+        } 
+    } 
+    highScore = array[i];
+    return highScore;
 };
-const  reduceFn = [1, 2, 3].reduce(function(a, b) {
-    return a + b;
-}, 0);
+const highScore = reduce(array);
+const data = [];
+
+for (var i = 0; i < array.length; i++) 
+{ if (array[i] == highScore) {
+ data.push(i);
+}
+}
+console.log(reduce(data,highScore));
 
 
 
-console.log(reduce(array,reduceFn))
