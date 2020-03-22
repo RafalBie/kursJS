@@ -5,7 +5,7 @@
 
 const humans = ["Marcin", "Ania", "Agnieszka", "Monika", "Piotrek"];
 
-const filterWith = (arr, filter) =>{
+const filterWith = (arr, filter) => {
 if (filter.length === 0){
     return arr;
 } else if (filter.length >0 && filter.length <= 3){
