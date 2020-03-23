@@ -18,7 +18,7 @@ const arrPush = (arr) => {
         let indexA = randomSlices(4,7);
         arrayOfArray.push(arr.slice(i, i + indexA )); 
          } 
-         console.log(arrayOfArray);
+         return arrayOfArray;
         };
 arrPush (alphabet)
 
