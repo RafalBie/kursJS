@@ -28,4 +28,4 @@ if (filter.length === 0){
 
 
 }
-console.log (filterWith(humans))
+console.log (filterWith(humans,"pouidwbib"))
