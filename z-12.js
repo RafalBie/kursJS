@@ -72,3 +72,21 @@
 // if (fact.substring(10, 15) === "prime") {
 //  console.log(fact);
 //  }
+
+
+function quack(num) {
+    for (var i = 0; i < num; i++) {
+     console.log("Quack!");
+}
+}
+    var fly = function(num) {
+    for (var i = 0; i < num; i++) {
+    console.log("Flying!"); 
+        }
+    }
+    var superFly = fly; 
+    superFly(2);
+    
+    // var superQuack = quack; 
+    // superQuack(3);
+    quack (4)

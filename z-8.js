@@ -6,54 +6,48 @@
 // Dodatkowe pola - phoneNr - random 9 numbers,
  // oraz _id = objectId() - wykorzystać bibliotekę  https://www.npmjs.com/package/uuid
          
- const group = {
-   persons: [
+ 
+  const  persons = 
+
+  [
       {"name": "Jan", "surname": "Kowalski"},
       {"name": "John", "surname": "Smith"},
       {"name": "Robin", "surname": "Kenedy"},
-   ],
-   //  countries: ['PL', 'UK', 'USA'],
-   // const emails =  ['gmail.com', 'onet.pl', 'gazeta.pl'];
- }
+   ];
+   
+
         
  
 
-  const generate = {
-      genaratePerson: function(people) { 
-         const persons = people.persons
-         return persons[Math.floor(Math.random() * persons.length)];
-      },
-      // generateEmail = Math.floor(Math.random() * emails.length),
-      // generateAge(minAge,maxAge){
-      //    return Math.floor(Math.random() * (maxAge - minAge + 1) + minAge);
-      // },
-      // generateCountry = Math.floor(Math.random() * countries.length),
-  };
-     
-
-    const Human = (people,random) => {
-       const person = random.genaratePerson(people);
-      // country: countries.generateCountry,
-      // email: emails.generateEmail,
-      // age: generateAge (18,85),
-      
-    };
-
-      
-      return {
-      name: random.genaratePerson(people).name,
+  const generator = (persons) => { 
+         const indexName = Math.floor(Math.random() * persons.length);
+         // console.log (`${persons[indexName]}`);
+         return  persons[indexName] 
       };
-   }
-         console.log (Human(group,generate))
+     console.log (generator(persons))
+     
+   const generateHuman = (generator) => {
+       const person = generator;
+         return {
+      name: generator.name,
+      }
+   };
+   
+       console.log(generateHuman(persons,generator))
 
 
 
 
    
-   // function displayHuman (Human) {
-   //       console.log (Human)
-   // }
+   //  countries: ['PL', 'UK', 'USA'],
+   // const emails =  ['gmail.com', 'onet.pl', 'gazeta.pl'];
+    // generateEmail = Math.floor(Math.random() * emails.length),
+      // generateAge(minAge,maxAge){
+      //    return Math.floor(Math.random() * (maxAge - minAge + 1) + minAge);
+      // 
+      // generateCountry = Math.floor(Math.random() * countries.length),
+ 
 
-   // const GenarateHuman = generatedPerson();
-   // displayHuman (GenarateHuman);
-
+ // country: countries.generateCountry,
+      // email: emails.generateEmail,
+      // age: generateAge (18,85),
