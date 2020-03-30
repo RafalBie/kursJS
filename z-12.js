@@ -81,22 +81,22 @@ for (let i = 0; i < 10; i++) {
 // Zakres zagnieżdzony w innym zakresie. Zakres lokalny moze być zagnieżdzony w innym zakresie lokalnym.
 // Najpierw sprawdzany jest aktualny zakres, potem wyższy (jeśli jest tak potrzeba). Wreszcie (jeśli dana zmienne nie została odnazleiona) sprawdzony zostanie zakres globalny.
 
-let example1 = "globalna";
+// let example1 = "globalna";
 
-if (true) {
- let example2 = "zakres lokalny. dla którego zakresem zewnętrznym jest zakres globalny"
+// if (true) {
+//  let example2 = "zakres lokalny. dla którego zakresem zewnętrznym jest zakres globalny"
 
 
 
- if (true) {
-  let example3 = "zakres lokalny. dla którego zakresem zewnętrznym jest inny zakres lokalny"
-  example1 = "nowa wartość";
-  console.log(example1);
-  console.log(example2);
-  console.log(example3);
- }
+//  if (true) {
+//   let example3 = "zakres lokalny. dla którego zakresem zewnętrznym jest inny zakres lokalny"
+//   example1 = "nowa wartość";
+//   console.log(example1);
+//   console.log(example2);
+//   console.log(example3);
+//  }
 
-}
+// }
 
 
 /* CO TO JEST ZAKRES - JESZCZE RAZ */
