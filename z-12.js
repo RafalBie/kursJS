@@ -1,92 +1,119 @@
-// function findCarInLot(car) {
-//     for (var i = 0; i < lot.length; i++) {
-//     if (car === lot[i])  
-//     {
-//         return i;
-//     } 
-//     } return -1;
-// }
-//     var chevy = {
-//          make: "Chevy",
-//         model: "Bel Air" 
-//     };
-//     var taxi = {
-//     make: "Webville Motors",
-//     model: "Taxi" };
-//     var fiat1 = { make: "Fiat",
-//     model: "500" };
-//     var fiat2 = { make: "Fiat",
-//     model: "500" };
-//     var lot = [chevy, taxi, fiat1, fiat2];
-//     // var loc1 = findCarInLot(fiat2); 
-//     console.log(findCarInLot(fiat2));
-//     var loc2 = findCarInLot(taxi); 
-//     console.log(findCarInLot(taxi));
-//     var loc3 = findCarInLot(chevy); 
-//     var loc4 = findCarInLot(fiat1);
-
-    // function lieDetectorTest() {
-    //      var lies = 0;
-    //     var stolenDiamond = {
-    //         x: !null};
-    //      if (stolenDiamond.x) {
-    //     console.log("You stole the diamond"); 
-    //     lies++;
-    //      }
-    //     var car = {
-    //     keysInPocket: !null };
-    //     if (car.keysInPocket) {
-    //     console.log("Uh oh, guess you stole the car!");
-    //      lies++;
-    //     }
-    //     if (car.emptyGasTank) {
-    //     console.log("You drove the car after you stole it!");
-    //      lies++;
-    //     }
-    //     var foundYouAtTheCrimeScene = ["Rafal"];
-    //      if (foundYouAtTheCrimeScene) {
-    //     console.log("A sure sign of guilt");  
-    //     lies++;
-    //      }
-    //     if (foundYouAtTheCrimeScene[0]) 
-    //     { console.log("Caught with a stolen item!");
-    //      lies++;
-    //     }
-    //     var yourName = "Rafal";
-    //      if (yourName) {
-    //     console.log("Guess you lied about your name"); 
-    //     lies++;
-    //     } return lies;
-    //         }
-    //     var numberOfLies = lieDetectorTest(); 
-    //     console.log("You told " + numberOfLies + " lies!"); 
-    //     if (numberOfLies >= 3) {
-    //     console.log("Guilty as charged"); 
-    // }
-
-//  var name = "Jenny";
-//    var phone = "8609";
-//     var fact = "This is a prime number";
-// var songName = phone + "/" + name;
-// var index = phone.indexOf("-");
-// if (fact.substring(10, 15) === "prime") {
-//  console.log(fact);
-//  }
 
 
-function quack(num) {
-    for (var i = 0; i < num; i++) {
-     console.log("Quack!");
+
+/* ZAKRES LOKALNY (BLOK)  - ZAKRES BLOKOWY*/
+
+// Taki zakres nie istniał przed wprowadznei elet i const (była tylko funkcja), wiec pojawił się w ES6
+
+
+// Przykład 1 
+
+let var1 = 1;
+const var2 = 2;
+var var3 = 3;
+
+{
+ // let var1 = "wewnętrzne 1";
+ // const var2 = "wewnętrzne 2";
+ // var var3 = "wewnętrzne 3"
+ // console.log(var1);
+ // console.log(var2);
+ // console.log(var3);
+ var1 = "wewnętrzne 1";
+ // var2 = "wewnętrzne 2";
+ var3 = "wewnętrzne 3";
+ const var4 = "coś"
 }
+// console.log(var1);
+// console.log(var2);
+// console.log(var3);
+// console.log(var4);
+
+
+
+// PRZYKŁAD 2
+
+const a = "1 w zakresie globalnym";
+let b = "2 w zakresie globalnym";
+var c = "3 w zakresie globalnym";
+
+if (true) {
+ // console.log(a) // zmienna globalna jest widoczna w bloku.
+ // a = "przypisanie do a? Ale którego?"
+//  const a = "1 w bloku";
+ console.log("a w bloku to:" + a);
+//  b = "2 w bloku";
+//  console.log("b w bloku to:" + b);
+ // var c = "3 w bloku";
 }
-    var fly = function(num) {
-    for (var i = 0; i < num; i++) {
-    console.log("Flying!"); 
-        }
-    }
-    var superFly = fly; 
-    superFly(2);
-    
-    // var superQuack = quack; 
-    // superQuack(3);
-    quack (4)
+
+// console.log(a);
+// console.log(c);
+
+// Zakres zmiennej a jej widoczność. Widoczność moze być przysłaniania
+
+
+
+// PRZYKŁAD 3
+
+// let i = 100;
+
+for (let i = 0; i < 10; i++) {
+ // let i = 10;
+ // console.log(i);
+ // const inFor = "wewnątrz pętli";
+ // if (i < 4) {
+ // i = 10;
+ // let i = 20;
+ // inFor = "wewnątrz pętli i wewnątrz instrukcji warunkowej";
+ // const inFor = "wewnątrz pętli i wewnątrz instrukcji warunkowej";
+ // console.log("i wewnątrz instrukcji warunkowej, w pętli " + i);
+ // console.log(inFor);
+
+ // }
+
+}
+
+
+
+// PRZYKŁAD 4
+
+// Zakres zagnieżdzony w innym zakresie. Zakres lokalny moze być zagnieżdzony w innym zakresie lokalnym.
+// Najpierw sprawdzany jest aktualny zakres, potem wyższy (jeśli jest tak potrzeba). Wreszcie (jeśli dana zmienne nie została odnazleiona) sprawdzony zostanie zakres globalny.
+
+let example1 = "globalna";
+
+if (true) {
+ let example2 = "zakres lokalny. dla którego zakresem zewnętrznym jest zakres globalny"
+
+
+
+ if (true) {
+  let example3 = "zakres lokalny. dla którego zakresem zewnętrznym jest inny zakres lokalny"
+  example1 = "nowa wartość";
+  console.log(example1);
+  console.log(example2);
+  console.log(example3);
+ }
+
+}
+
+
+/* CO TO JEST ZAKRES - JESZCZE RAZ */
+
+
+// Reguły wykorzystania zmiennych podczas wykonywania kodu.
+
+// Zakres to lista wszystkich zadeklarowanych indentyfikatorów (zmienne)możliwych do użycia w danym momencie wykonywania programu.
+
+// Zakres mówi gdzie dana zmienna jest widoczna i gdzie może być wykorzystana.
+
+// Zakres globalny i zakres lokalny (zakres blokowy lub w funkcji).
+
+// W naszym programie (złożonym) istnieje mnóstwo zakresów. Każdy blok, funkcja, towrzy swój zakres. Jeden zakres może być zagnieżdzony w innym zakresie. 
+
+//Zakres jest zależny od tego gdzie dana zmienna znajduje się w kodzie (gdzie została utworzona).
+
+// Zasady szukanie zmiennej:
+//  -- najpierw zakres w którym jesteśmy. Póki nie znajdzie przeszukuje do zakresu najwyższego (zakres globalny)
+// -- Po znaleznieniu (dopasowaniu) pierwszej pasujacej zmiennej pozostałe nie są już szukane.    
