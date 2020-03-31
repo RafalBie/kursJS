@@ -1,35 +1,29 @@
-
-
-
 /* ZAKRES LOKALNY (BLOK)  - ZAKRES BLOKOWY*/
 
 // Taki zakres nie istniał przed wprowadznei elet i const (była tylko funkcja), wiec pojawił się w ES6
 
-
-// Przykład 1 
+// Przykład 1
 
 let var1 = 1;
 const var2 = 2;
 var var3 = 3;
 
 {
- // let var1 = "wewnętrzne 1";
- // const var2 = "wewnętrzne 2";
- // var var3 = "wewnętrzne 3"
- // console.log(var1);
- // console.log(var2);
- // console.log(var3);
- var1 = "wewnętrzne 1";
- // var2 = "wewnętrzne 2";
- var3 = "wewnętrzne 3";
- const var4 = "coś"
+  // let var1 = "wewnętrzne 1";
+  // const var2 = "wewnętrzne 2";
+  // var var3 = "wewnętrzne 3"
+  // console.log(var1);
+  // console.log(var2);
+  // console.log(var3);
+  var1 = "wewnętrzne 1";
+  // var2 = "wewnętrzne 2";
+  var3 = "wewnętrzne 3";
+  const var4 = "coś";
 }
 // console.log(var1);
 // console.log(var2);
 // console.log(var3);
 // console.log(var4);
-
-
 
 // PRZYKŁAD 2
 
@@ -38,13 +32,13 @@ let b = "2 w zakresie globalnym";
 var c = "3 w zakresie globalnym";
 
 if (true) {
- // console.log(a) // zmienna globalna jest widoczna w bloku.
- // a = "przypisanie do a? Ale którego?"
-//  const a = "1 w bloku";
- console.log("a w bloku to:" + a);
-//  b = "2 w bloku";
-//  console.log("b w bloku to:" + b);
- // var c = "3 w bloku";
+  // console.log(a) // zmienna globalna jest widoczna w bloku.
+  // a = "przypisanie do a? Ale którego?"
+  //  const a = "1 w bloku";
+  console.log("a w bloku to:" + a);
+  //  b = "2 w bloku";
+  //  console.log("b w bloku to:" + b);
+  // var c = "3 w bloku";
 }
 
 // console.log(a);
@@ -52,29 +46,23 @@ if (true) {
 
 // Zakres zmiennej a jej widoczność. Widoczność moze być przysłaniania
 
-
-
 // PRZYKŁAD 3
 
 // let i = 100;
 
 for (let i = 0; i < 10; i++) {
- // let i = 10;
- // console.log(i);
- // const inFor = "wewnątrz pętli";
- // if (i < 4) {
- // i = 10;
- // let i = 20;
- // inFor = "wewnątrz pętli i wewnątrz instrukcji warunkowej";
- // const inFor = "wewnątrz pętli i wewnątrz instrukcji warunkowej";
- // console.log("i wewnątrz instrukcji warunkowej, w pętli " + i);
- // console.log(inFor);
-
- // }
-
+  // let i = 10;
+  // console.log(i);
+  // const inFor = "wewnątrz pętli";
+  // if (i < 4) {
+  // i = 10;
+  // let i = 20;
+  // inFor = "wewnątrz pętli i wewnątrz instrukcji warunkowej";
+  // const inFor = "wewnątrz pętli i wewnątrz instrukcji warunkowej";
+  // console.log("i wewnątrz instrukcji warunkowej, w pętli " + i);
+  // console.log(inFor);
+  // }
 }
-
-
 
 // PRZYKŁAD 4
 
@@ -86,8 +74,6 @@ for (let i = 0; i < 10; i++) {
 // if (true) {
 //  let example2 = "zakres lokalny. dla którego zakresem zewnętrznym jest zakres globalny"
 
-
-
 //  if (true) {
 //   let example3 = "zakres lokalny. dla którego zakresem zewnętrznym jest inny zakres lokalny"
 //   example1 = "nowa wartość";
@@ -98,9 +84,7 @@ for (let i = 0; i < 10; i++) {
 
 // }
 
-
 /* CO TO JEST ZAKRES - JESZCZE RAZ */
-
 
 // Reguły wykorzystania zmiennych podczas wykonywania kodu.
 
@@ -110,10 +94,10 @@ for (let i = 0; i < 10; i++) {
 
 // Zakres globalny i zakres lokalny (zakres blokowy lub w funkcji).
 
-// W naszym programie (złożonym) istnieje mnóstwo zakresów. Każdy blok, funkcja, towrzy swój zakres. Jeden zakres może być zagnieżdzony w innym zakresie. 
+// W naszym programie (złożonym) istnieje mnóstwo zakresów. Każdy blok, funkcja, towrzy swój zakres. Jeden zakres może być zagnieżdzony w innym zakresie.
 
 //Zakres jest zależny od tego gdzie dana zmienna znajduje się w kodzie (gdzie została utworzona).
 
 // Zasady szukanie zmiennej:
 //  -- najpierw zakres w którym jesteśmy. Póki nie znajdzie przeszukuje do zakresu najwyższego (zakres globalny)
-// -- Po znaleznieniu (dopasowaniu) pierwszej pasujacej zmiennej pozostałe nie są już szukane.    
+// -- Po znaleznieniu (dopasowaniu) pierwszej pasujacej zmiennej pozostałe nie są już szukane.
